@@ -2,7 +2,7 @@
 
 Welcome to **FunkyMotions**! Unleash the power of groovy animations and let your elements dance, jive, and have the time of their lives!
 
-![Disco Ball](https://unsplash.com/photos/ORSGQc-2Ef8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink.jpg) 
+![Disco Ball](https://i.imgur.com/zL5WIJJ.jpg) 
 
 ---
 
