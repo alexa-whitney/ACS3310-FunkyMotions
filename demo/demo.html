@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FunkyMotions Demo</title>
+    <link rel="stylesheet" href="../src/styles.css" />
+
+    <style>
+      /* Funky Background */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #282a36;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+        width: auto;
+        overflow: hidden;
+        border: 20px solid #8be9fd;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        color: #ff79c6; /* Neon Pink */
+        margin-bottom: 1rem;
+      }
+
+      /* Funky Box */
+      #box {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, #ff79c6, #50fa7b, #ff79c6, #f1fa8c, #8be9fd, #ff79c6); /* Gradient with Neon colors */
+        border-radius: 50%; /* Make it circular */
+        margin-top: 80px;
+        opacity: 1; /* Make the box visible */
+        transform: translateX(0%);
+        box-shadow: 0 0 10px #f1fa8c, 0 0 30px #8be9fd, 0 0 60px #ff79c6,
+          0 0 40px #50fa7b; /* Neon Shadows */
+      }
+
+      /* Reset Button Styling */
+      button.reset-btn {
+        background-color: #ff79c6; /* Neon Pink */
+        color: #50fa7b; /* Neon Green */
+        margin-bottom: 20px; /* Spacing from the other buttons */
+        margin-top: 20px;
+      }
+
+      button.reset-btn:hover {
+        background-color: #50fa7b; /* Neon Green */
+        color: #ff79c6; /* Neon Pink */
+      }
+
+      #button-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* This will create spacing between the buttons */
+        justify-content: center; /* This will center the buttons horizontally */
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      /* Funky Buttons */
+      button {
+        background-color: #50fa7b; /* Neon Green */
+        border: none;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 0 10px #ff79c6; /* Neon Pink Shadow */
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #ff79c6; /* Neon Pink */
+      }
+    </style>
+    <script type="module" src="../src/funkyMotions.js"></script>
+  </head>
+  <body>
+    <h2>FunkyMotions Demo</h2>
+
+    <div id="button-container">
+      <button onclick="FunkyMotions.fadeOut(box)">Fade Out</button>
+      <button onclick="FunkyMotions.fadeIn(box)">Fade In</button>
+      <button onclick="FunkyMotions.slideOut(box, 500, 'right')">
+        Slide Out to Right
+      </button>
+      <button onclick="FunkyMotions.slideIn(box, 500, 'left')">
+        Slide In from Left
+      </button>
+      <button onclick="FunkyMotions.zoomOut(box)">Zoom Out</button>
+      <button onclick="FunkyMotions.zoomIn(box)">Zoom In</button>
+      <button onclick="FunkyMotions.rotate(box)">Rotate</button>
+      <button onclick="FunkyMotions.bounce(box)">Bounce</button>
+    </div>
+
+    <button class="reset-btn" onclick="FunkyMotions.reset(box)">Reset</button>
+
+    <div id="box"></div>
+
+    <script type="module">
+        import FunkyMotions from '../src/funkyMotions.js';
+        window.FunkyMotions = FunkyMotions; // This will expose FunkyMotions to the global scope
+    
+        const box = document.getElementById("box");
+    </script>
+
+  </body>
+</html>
