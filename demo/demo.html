@@ -85,29 +85,34 @@
     <h2>FunkyMotions Demo</h2>
 
     <div id="button-container">
-      <button onclick="FunkyMotions.fadeOut(box)">Fade Out</button>
-      <button onclick="FunkyMotions.fadeIn(box)">Fade In</button>
-      <button onclick="FunkyMotions.slideOut(box, 500, 'right')">
-        Slide Out to Right
-      </button>
-      <button onclick="FunkyMotions.slideIn(box, 500, 'left')">
-        Slide In from Left
-      </button>
-      <button onclick="FunkyMotions.zoomOut(box)">Zoom Out</button>
-      <button onclick="FunkyMotions.zoomIn(box)">Zoom In</button>
-      <button onclick="FunkyMotions.rotate(box)">Rotate</button>
-      <button onclick="FunkyMotions.bounce(box)">Bounce</button>
+      <button id="fadeOutBtn">Fade Out</button>
+      <button id="fadeInBtn">Fade In</button>
+      <button id="slideOutBtn">Slide Out to Right</button>
+      <button id="slideInBtn">Slide In from Left</button>
+      <button id="zoomOutBtn">Zoom Out</button>
+      <button id="zoomInBtn">Zoom In</button>
+      <button id="rotateBtn">Rotate</button>
+      <button id="bounceBtn">Bounce</button>
     </div>
 
-    <button class="reset-btn" onclick="FunkyMotions.reset(box)">Reset</button>
+    <button class="reset-btn" id="resetBtn">Reset</button>
 
     <div id="box"></div>
 
     <script type="module">
         import FunkyMotions from '../src/funkyMotions.js';
-        window.FunkyMotions = FunkyMotions; // This will expose FunkyMotions to the global scope
     
         const box = document.getElementById("box");
+
+        document.getElementById("fadeOutBtn").addEventListener('click', () => FunkyMotions.fadeOut(box));
+        document.getElementById("fadeInBtn").addEventListener('click', () => FunkyMotions.fadeIn(box));
+        document.getElementById("slideOutBtn").addEventListener('click', () => FunkyMotions.slideOut(box, 500, 'right'));
+        document.getElementById("slideInBtn").addEventListener('click', () => FunkyMotions.slideIn(box, 500, 'left'));
+        document.getElementById("zoomOutBtn").addEventListener('click', () => FunkyMotions.zoomOut(box));
+        document.getElementById("zoomInBtn").addEventListener('click', () => FunkyMotions.zoomIn(box));
+        document.getElementById("rotateBtn").addEventListener('click', () => FunkyMotions.rotate(box));
+        document.getElementById("bounceBtn").addEventListener('click', () => FunkyMotions.bounce(box));
+        document.getElementById("resetBtn").addEventListener('click', () => FunkyMotions.reset(box));
     </script>
 
   </body>

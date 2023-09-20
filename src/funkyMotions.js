@@ -1,34 +1,43 @@
-export function reset(element) {
-    element.style.transition = "",
-        element.style.opacity = "",
-        element.style.transform = ""
-};
-
-export function fadeIn(element, duration = 500) {
-    this.reset(element);
-    element.style.transition = `opacity ${duration}ms`;
-    setTimeout(() => {
-        element.style.opacity = 1;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.bounce = exports.rotate = exports.zoomOut = exports.zoomIn = exports.slideOut = exports.slideIn = exports.fadeOut = exports.fadeIn = exports.reset = void 0;
+function reset(element) {
+    element.style.transition = "";
+    element.style.opacity = "";
+    element.style.transform = "";
+}
+exports.reset = reset;
+;
+function fadeIn(element, duration) {
+    if (duration === void 0) { duration = 500; }
+    reset(element);
+    element.style.transition = "opacity ".concat(duration, "ms");
+    setTimeout(function () {
+        element.style.opacity = "1";
     }, 0);
-};
-
-export function fadeOut(element, duration = 500) {
-    this.reset(element);
-    element.style.transition = `opacity ${duration}ms`;
-    element.style.opacity = 0;
-};
-
-export function slideIn(element, duration = 500, direction = 'right') {
-    this.reset(element);
-    element.style.opacity = 1;
-    element.style.transition = `transform ${duration}ms`;
-
+}
+exports.fadeIn = fadeIn;
+;
+function fadeOut(element, duration) {
+    if (duration === void 0) { duration = 500; }
+    reset(element);
+    element.style.transition = "opacity ".concat(duration, "ms");
+    element.style.opacity = "0";
+}
+exports.fadeOut = fadeOut;
+;
+function slideIn(element, duration, direction) {
+    if (duration === void 0) { duration = 500; }
+    if (direction === void 0) { direction = 'right'; }
+    reset(element);
+    element.style.opacity = "1";
+    element.style.transition = "transform ".concat(duration, "ms");
     switch (direction) {
         case 'left':
             element.style.transform = 'translateX(-100%)';
-            setTimeout(() => {
+            setTimeout(function () {
                 element.style.transform = 'translateX(0%)';
-            }, 50);  // slight delay to ensure transform applies correctly
+            }, 50); // slight delay to ensure transform applies correctly
             break;
         case 'top':
             element.style.transform = 'translateY(0%)';
@@ -39,12 +48,15 @@ export function slideIn(element, duration = 500, direction = 'right') {
         default:
             element.style.transform = 'translateX(0%)';
     }
-};
-
-export function slideOut(element, duration = 500, direction = 'right') {
-    this.reset(element);
-    element.style.opacity = 1; // Ensure the box is visible
-    element.style.transition = `transform ${duration}ms`;
+}
+exports.slideIn = slideIn;
+;
+function slideOut(element, duration, direction) {
+    if (duration === void 0) { duration = 500; }
+    if (direction === void 0) { direction = 'right'; }
+    reset(element);
+    element.style.opacity = "1"; // Ensure the box is visible
+    element.style.transition = "transform ".concat(duration, "ms");
     switch (direction) {
         case 'left':
             element.style.transform = 'translateX(-100%)';
@@ -58,34 +70,43 @@ export function slideOut(element, duration = 500, direction = 'right') {
         default:
             element.style.transform = 'translateX(100%)';
     }
-};
-
-export function zoomIn(element, duration = 500) {
-    this.reset(element);
-    element.style.opacity = 1;
-    element.style.transition = `transform ${duration}ms`;
-    setTimeout(() => {
+}
+exports.slideOut = slideOut;
+;
+function zoomIn(element, duration) {
+    if (duration === void 0) { duration = 500; }
+    reset(element);
+    element.style.opacity = "1";
+    element.style.transition = "transform ".concat(duration, "ms");
+    setTimeout(function () {
         element.style.transform = 'scale(1)';
     }, 0);
-};
-
-export function zoomOut(element, duration = 500) {
-    this.reset(element);
-    element.style.transition = `transform ${duration}ms`;
+}
+exports.zoomIn = zoomIn;
+;
+function zoomOut(element, duration) {
+    if (duration === void 0) { duration = 500; }
+    reset(element);
+    element.style.transition = "transform ".concat(duration, "ms");
     element.style.transform = 'scale(0)';
-};
-
-export function rotate(element, duration = 500, degrees = 165) {
-    this.reset(element);
-    element.style.transform = `rotate(0deg)`;
-    element.style.transition = `transform ${duration}ms`;
-    setTimeout(() => {
-        element.style.transform = `rotate(${degrees}deg)`;
+}
+exports.zoomOut = zoomOut;
+;
+function rotate(element, duration, degrees) {
+    if (duration === void 0) { duration = 500; }
+    if (degrees === void 0) { degrees = 165; }
+    reset(element);
+    element.style.transform = "rotate(0deg)";
+    element.style.transition = "transform ".concat(duration, "ms");
+    setTimeout(function () {
+        element.style.transform = "rotate(".concat(degrees, "deg)");
     }, 50);
-};
-
-export function bounce(element, duration = 500) {
-    this.reset(element);
+}
+exports.rotate = rotate;
+;
+function bounce(element, duration) {
+    if (duration === void 0) { duration = 500; }
+    reset(element);
     element.animate([
         { transform: 'translateY(0px)' },
         { transform: 'translateY(-20px)' },
@@ -97,18 +118,16 @@ export function bounce(element, duration = 500) {
         easing: 'cubic-bezier(.4,0.01,.65,1.48)'
     });
 }
-
-const FunkyMotions = {
-    reset,
-    fadeIn,
-    fadeOut,
-    slideIn,
-    slideOut,
-    zoomIn,
-    zoomOut,
-    rotate,
-    bounce
+exports.bounce = bounce;
+var FunkyMotions = {
+    reset: reset,
+    fadeIn: fadeIn,
+    fadeOut: fadeOut,
+    slideIn: slideIn,
+    slideOut: slideOut,
+    zoomIn: zoomIn,
+    zoomOut: zoomOut,
+    rotate: rotate,
+    bounce: bounce
 };
-
-export default FunkyMotions;
-
+exports.default = FunkyMotions;
