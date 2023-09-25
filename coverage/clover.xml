@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1695234131384" clover="3.2.0">
-  <project timestamp="1695234131384" name="All files">
+<coverage generated="1695663989169" clover="3.2.0">
+  <project timestamp="1695663989169" name="All files">
     <metrics statements="73" coveredstatements="73" conditionals="30" coveredconditionals="23" methods="13" coveredmethods="13" elements="116" coveredelements="109" complexity="0" loc="73" ncloc="73" packages="1" files="1" classes="1"/>
     <file name="funkyMotions.js" path="/Users/alexawhitney/Desktop/Dominican ACS Courses/Fall 2023/ACS3310 Writing JS Libraries/FunkyMotions/src/funkyMotions.js">
       <metrics statements="73" coveredstatements="73" conditionals="30" coveredconditionals="23" methods="13" coveredmethods="13"/>
