@@ -4,7 +4,8 @@
   "description": "Welcome to **FunkyMotions**! Unleash the power of groovy animations and let your elements dance, jive, and have the time of their lives!",
   "main": "src/funkyMotions.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc src/funkyMotions.ts"
   },
   "keywords": [],
   "author": "",
