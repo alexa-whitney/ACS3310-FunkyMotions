@@ -19,8 +19,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'funkyMotions.js',
-                library: 'lib',
+    filename: 'bundle.js',
+                library: 'FunkyMotions',
                 libraryTarget: 'var',
                 globalObject: 'this',
   },

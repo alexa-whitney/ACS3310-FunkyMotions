@@ -79,7 +79,6 @@
         background-color: #ff79c6; /* Neon Pink */
       }
     </style>
-    <script src="../dist/funkyMotions.js"></script>
   </head>
   <body>
     <h2>FunkyMotions Demo</h2>
@@ -99,8 +98,11 @@
 
     <div id="box"></div>
 
-    <script type="module">
-        import FunkyMotions from '../src/funkyMotions.js';
+    <script src="../dist/bundle.js"></script>
+
+    <script>
+        console.log('**** FunkyMotions ES Module ****')
+        console.log(FunkyMotions)
     
         const box = document.getElementById("box");
 
