@@ -1,8 +1,8 @@
 {
   "name": "funkymotions",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Welcome to **FunkyMotions**! Unleash the power of groovy animations and let your elements dance, jive, and have the time of their lives!",
-  "main": "dist/bundle.js",
+  "main": "src/FunkyMotions.ts",
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.config.js"
