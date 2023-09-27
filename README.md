@@ -2,10 +2,10 @@
 
 ![status badge](https://github.com/alexa-whitney/ACS3310-FunkyMotions/actions/workflows/node.js.yml/badge.svg)
 
-[![npm version](https://img.shields.io/npm/v/FunkyMotions.svg)](https://www.npmjs.com/package/FunkyMotions)
-[![npm downloads](https://img.shields.io/npm/dt/FunkyMotions.svg)](https://www.npmjs.com/package/FunkyMotions)
+[![npm version](https://img.shields.io/npm/v/FunkyMotions.svg)](https://www.npmjs.com/package/funkymotions)
+[![npm downloads](https://img.shields.io/npm/dt/FunkyMotions.svg)](https://www.npmjs.com/package/funkymotions)
 
-[NPM Package](https://www.npmjs.com/package/FunkyMotions)
+[NPM Package](https://www.npmjs.com/package/funkymotions)
 
 Welcome to **FunkyMotions**! Unleash the power of groovy animations and let your elements dance, jive, and have the time of their lives!
 
