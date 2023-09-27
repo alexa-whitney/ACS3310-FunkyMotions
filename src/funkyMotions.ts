@@ -1,6 +1,7 @@
 // This function clears the styles for transition, opacity, and transform properties
 export function reset(element: HTMLElement): void {
   // Reset the transition property to its default value
+  // Style is a property of the DOM element that provides access to the inline styles
   element.style.transition = "";
   // Reset the opacity property to its default value
   element.style.opacity = "";
@@ -128,6 +129,7 @@ export function rotate(
 export function bounce(element: HTMLElement, duration: number = 500): void {
   reset(element);
   // Define the bounce animation keyframes
+  // animate() is a method of the Web Animations API
   element.animate(
     [
       { transform: "translateY(0px)" },
@@ -138,7 +140,11 @@ export function bounce(element: HTMLElement, duration: number = 500): void {
     ],
     {
       // Set the duration and easing function for the animation
-      duration: duration,
+      duration: duration, // specifies how long the animation should take to complete, in milliseconds
+      // easing function specifies the rate of change of the animation over time
+      /* cubic-bezier() is a type of easing function. The four numbers in the function 
+      represent the x and y coordinates of the two control points of the cubic Bezier curve.
+      The specific values given (0.4, 0.01, 0.65, 1.48) create a bounce-like easing effect */
       easing: "cubic-bezier(.4,0.01,.65,1.48)",
     }
   );
